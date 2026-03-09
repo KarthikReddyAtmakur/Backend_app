@@ -8,3 +8,26 @@
     border:1px solid gray;
     border-radius: 5px;
 }
+.header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#333;
+    color:white;
+}
+.footer{
+    background:#131313;
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+.navbar a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    font-weight:bold;
+    padding-right: 10px;
+}
+.navbar a:hover{
+    text-decoration:underline;
+}
