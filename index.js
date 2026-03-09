@@ -23,9 +23,6 @@ app.use(
 );
 
 app.use("/", storeRouter);
-// app.use("/auth", authRouter);
-// app.use("/products", productRouter);
-// app.use("/users", userRouter);
 
 const startServer = async () => {
   await dbConnect();
