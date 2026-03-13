@@ -11,31 +11,33 @@ const addProduct = async (req, res) => {
   res.redirect("/products");
 };
 
-const addProductForm = async (req,res) =>{
-    res.render("products/add");
+const addProductForm = async (req, res) => {
+  res.render("products/add");
 };
 
-const deleteProduct = async (req,res) =>{
-    const id = req.params.id;
-    await productModel.findByIdAndDelete(id)
-    res.redirect("/products")
+const deleteProduct = async (req, res) => {
+  const id = req.params.id;
+  await productModel.findByIdAndDelete(id);
+  res.redirect("/products");
 };
 
-const editProductForm = async (req,res) => {
-    const id = req.params.id;
-    const product = await productModel.findOne({_id:id})
-    res.render("products/edit",{product})
-}
+const editProductForm = async (req, res) => {
+  const id = req.params.id;
+  const product = await productModel.findOne({ _id: id });
+  res.render("products/edit", { product });
+};
 
-const saveProduct = async (req,res) => {
-    const id = req.params.id;
-    await productModel.findByIdAndUpdate(id,req.body)
-    res.redirect("/products")
-}
+const saveProduct = async (req, res) => {
+  const id = req.params.id;
+  await productModel.findByIdAndUpdate(id, req.body);
+  res.redirect("/products")
+};
 
-export {getProducts,
-    addProduct,
-    addProductForm,
-    deleteProduct,
-    editProductForm,
-    saveProduct}
+export {
+  getProducts,
+  addProduct,
+  addProductForm,
+  deleteProduct,
+  editProductForm,
+  saveProduct
+};
